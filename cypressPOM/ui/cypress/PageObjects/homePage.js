@@ -10,7 +10,6 @@ class HomePage
     clearbtn = "//button[normalize-space()='Clear']"
     selectAll = "(//span[normalize-space()='Select All'])[1]"
     // profdropdownbtn = "div[role='button']"
-    
     // adminProfile = "li[aria-label='Admin Role'] div[aria-label='Admin Role']"
     // greenprofile = "div[aria-label='Evgeni Grin']"
     // retailerProfile = "div[aria-label='Retailer profile - without data export']"
