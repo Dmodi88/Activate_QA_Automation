@@ -1,7 +1,7 @@
 import supplyChain from "../../../PageObjects/supplyChain_Page"
 import { When, Then } from "cypress-cucumber-preprocessor/steps";
 
-
+const sc = new supplyChain();
 
 Given('I navigate to automation exercise website', () => {
 cy.visit('https://automationexercise.com/');
@@ -36,19 +36,34 @@ When('I enter  login credentials', () => {
     })
     })
 Then('I should  be logged in', () => {
-   // cy.contains( 'Your email or password is incorrect!' ).should('be.visible');
+    const sc = new supplyChain();
+
+    sc.verifyHomePage()
     })
 
 
-    When(/^I login with  (.*?)$/, (profile) => {
+ When(/^I login with  (.*?)$/, (profile) => {
         cy.fixture('demoLogindata').then((data) => {
         const sc = new supplyChain();
         cy.log(" trying to login with profile : "+profile)
         sc.localLogin(data.username,profile)
          
         })
-        })
+    })
 
-        Given (/^Should be able to run on "(.*?)"$/, (devicename) => {
+ Given (/^Should be able to run on "(.*?)"$/, (devicename) => {
             cy.log(devicename);
-        });
+    });
+
+Given('the application is open', () => {
+            
+            cy.fixture('demoLogindata').then((data) => {
+                cy.visit(data.local);
+                const sc = new supplyChain();
+                sc.localLogin(data.username)
+                sc.verifyHomePage()
+                })
+            
+        });   
+
+  

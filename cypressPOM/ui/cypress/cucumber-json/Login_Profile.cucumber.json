@@ -32,7 +32,7 @@
             "name": "I navigate to supply chain application",
             "result": {
               "status": "passed",
-              "duration": 1474000000
+              "duration": 1769000000
             }
           },
           {
@@ -42,7 +42,7 @@
             "name": "I login with  Admin Role",
             "result": {
               "status": "failed",
-              "duration": 43783000000,
+              "duration": 42592000000,
               "error_message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `//div[text()='Admin Role']`, but never found it.\n    at supplyChain.localLogin (cypress/PageObjects/supplyChain_Page.js:131:7)\n    at Context.eval (cypress/integration/bdd-cucumber/Login/Login.js:47:11)"
             }
           },

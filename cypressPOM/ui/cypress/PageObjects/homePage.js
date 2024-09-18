@@ -9,6 +9,8 @@ class HomePage
     compMarket_enabled = "(//*[name()='svg'][@class='MuiSvgIcon-root-ffjXHZ jwkaMg MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon-fwkDVF ickJjY MuiSelect-icon MuiSelect-iconOutlined'])[1]"
     clearbtn = "//button[normalize-space()='Clear']"
     selectAll = "(//span[normalize-space()='Select All'])[1]"
+    dataExporter_Link ="//span[text()='Data Exporter']"
+
     // profdropdownbtn = "div[role='button']"
     
     // adminProfile = "li[aria-label='Admin Role'] div[aria-label='Admin Role']"
@@ -36,6 +38,11 @@ class HomePage
     // loader = "//span[@role='progressbar']//*[name()='svg']"
 
 
+
+    openDataExporter()
+    {
+        cy.xpath(this.dataExporter_Link).click()
+    }
 
     clickkpiDropdown1()
     {
