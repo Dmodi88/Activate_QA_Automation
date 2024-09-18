@@ -18,7 +18,7 @@ module.exports = defineConfig({
       };
       on('file:preprocessor', cucumber(options));
     },
-    specPattern: "cypress/integration/bdd-cucumber/Login/*.feature",
+    specPattern: "cypress/integration/bdd-cucumber/**/*.feature",
     execTimeout: 30000,
     requestTimeout: 30000,
     defaultCommandTimeout: 30000,
