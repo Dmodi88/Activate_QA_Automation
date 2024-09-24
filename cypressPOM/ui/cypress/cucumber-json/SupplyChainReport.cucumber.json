@@ -1,0 +1,112 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "DataExporter",
+    "line": 1,
+    "id": "dataexporter",
+    "tags": [],
+    "uri": "SupplyChainReport.feature",
+    "elements": [
+      {
+        "id": "dataexporter;run-sc-report--with-default-selection-for-aggregrated-view-and-verify-it-runs-successfully",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Run sc report  with default selection for aggregrated view and verify it runs successfully",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the application is open",
+            "result": {
+              "status": "passed",
+              "duration": 20222000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I navigate to the Supply chain performance report",
+            "result": {
+              "status": "passed",
+              "duration": 6171000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I run the sc report with default selection for aggregrated view",
+            "result": {
+              "status": "passed",
+              "duration": 11179000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the sc report should run successfully for aggregrated view",
+            "result": {
+              "status": "passed",
+              "duration": 196000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "dataexporter;run-sc-report--with-default-selection-for-trend-view-and-verify-it-runs-successfully",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Run sc report  with default selection for trend view and verify it runs successfully",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "the application is open",
+            "result": {
+              "status": "passed",
+              "duration": 19885000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I navigate to the Supply chain performance report",
+            "result": {
+              "status": "passed",
+              "duration": 6433000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I run the sc report with default selection for trend view",
+            "result": {
+              "status": "passed",
+              "duration": 6050000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "the report should run successfully for trend view",
+            "result": {
+              "status": "passed",
+              "duration": 142000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

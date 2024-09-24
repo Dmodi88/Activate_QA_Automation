@@ -22,6 +22,10 @@ class supplyChain {
   shopperSegmentTxt ="//h3[text()='Shopper Segments Splits']"
   salesGrowthTxt ="//h3[text()='Sales Growth Influencers']"
   dataExporterLnk = "//span[text()='Data Exporter']"
+  supplyChain_Link ="//span[text()='Supply Chain']"
+  report_Link ="//span[text()='Reports']"
+  scReport_Link ="//h2[text()='Supply Chain Performance']"
+
 
   dropdown_Profile ="//div[text()='Admin Role']"
   option_Evgeni = "//li[@data-value='Evgeni Grin']"
@@ -111,6 +115,17 @@ class supplyChain {
     cy.xpath(this.dataExporterLnk).click()
     cy.wait(15000)
    
+  }
+
+  
+
+  navigateToReports()
+  {
+    cy.xpath(this.supplyChain_Link).click()
+      cy.xpath(this.report_Link).click()
+      cy.xpath(this.scReport_Link).click()
+
+
   }
 }
 export default supplyChain;
