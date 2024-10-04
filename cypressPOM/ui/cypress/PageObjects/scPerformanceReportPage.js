@@ -7,6 +7,9 @@ class ScPerfReportPage
     dataTableBottomRows ="//div[@data-testid='bottom']//table[contains(@class,'Table-table table-bordered')]//tbody//tr"
     graphsOnTrend = "//*[contains(@class,'ciCompareMultiHighChart__ChartWrapperStyle')]"
     trendReportLink = "//h3[text()='Trend']"
+    filtersDropdown ="//input[@placeholder='Select or Search' ]|//input[ @placeholder='Select Attribute' ]"
+
+
     runReportAggregatedView()
   {
     cy.xpath(this.runReport_Btn).should('be.visible').click()
@@ -53,6 +56,24 @@ verifyGraphs(){
 
     
 }
+
+
+verifyFiltersCount(expectedCount){
+    cy.xpath(this.filtersDropdown).then(($dropdowns) => {
+        const dropdownsCount = $dropdowns.length;
+        expect(dropdownsCount).to.be.equals(expectedCount);
+      });  
+}
+
+verifyFilterIsNotBlank(){
+
+    cy.xpath(this.filtersDropdown) // Replace with your actual dropdown selector
+    .first()
+    .click() // Get the first dropdown
+    .find('option') // Find all options within the dropdown
+    .should('have.length', 6); 
+}
+
 
 }
 export default ScPerfReportPage;

@@ -55,4 +55,15 @@ Given('the application is open', () => {
     scRpt.verifyGraphs()
   });
 
- 
+  Then('the SC report should have {int} filters', (expectedFilterCount) => {
+   scRpt.verifyFiltersCount(expectedFilterCount)
+});
+
+
+Then('the SC report should have 15 filters', () => {
+  scRpt.verifyFiltersCount(10)
+});
+
+Then('none of the filters should be empty', () => {
+    scRpt.verifyFilterIsNotBlank()
+});
